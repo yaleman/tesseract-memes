@@ -25,7 +25,6 @@ jobs:
           libleptonica-dev \
           libtesseract-dev \
           clang
-          clang
       - name: cargo build
         run: cargo build --verbose --release
       - name: cargo test
