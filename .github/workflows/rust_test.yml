@@ -29,5 +29,11 @@ jobs:
         uses: mozilla-actions/sccache-action@v0.0.3
         with:
           version: "v0.4.2"
+      - name: Install required packages
+        run: |
+          sudo apt-get update && sudo apt-get -y install \
+          libleptonica-dev \
+          libtesseract-dev \
+          clang
       - name: cargo build
         run: cargo build --verbose
